@@ -1,0 +1,10 @@
+{
+	"ip": "1.2.3.4",
+	"port": 8080,
+	"hosting_domain": "https://i.mlbx.xyz/",
+	"images_folder": "/srv/images/",
+	"from_email": "img.mlbx.xyz <img@mlbx.xyz>",
+	"route": "/this-should-be-secret",
+	"mailgun_api": "key-XXX",
+	"mailgun_domain": "mlbx.xyz"
+}
