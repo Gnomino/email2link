@@ -27,7 +27,11 @@ def index():
 			filenames.append(attachment.filename)
 	if not urls:
 		return 'ERROR'
-	maildata = {"from": config['from_email'], "to": request.form["from"], "subject": ", ".join(filenames)}
+	if not request.form.get('subject'):
+		subject = ",".join(filenames)
+	else:
+		subject = "Re: " + request.form.get('subject')
+	maildata = {"from": config['from_email'], "to": request.form["from"], "subject": subject}
 	messageHTML = "Your images were successfully uploaded : <br>"
 	messageTXT = "Your images were successfully uploaded : \r\n"
 	for i in range(len(filenames)):
