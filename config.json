@@ -6,5 +6,6 @@
 	"from_email": "img.mlbx.xyz <img@mlbx.xyz>",
 	"route": "/this-should-be-secret",
 	"mailgun_api": "key-XXX",
-	"mailgun_domain": "mlbx.xyz"
+	"mailgun_domain": "mlbx.xyz",
+	"allowed_extensions": ["png", "jpeg", "jpg", "gif"]
 }

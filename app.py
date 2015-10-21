@@ -10,7 +10,7 @@ def allowed_file(name):
     if '.' not in name:
     	return False
     ext = name.rsplit('.', 1)[1].lower()
-    if ext in ["jpg", "png", "gif", "jpeg"]:
+    if ext in config['allowed_extensions']:
     	return ext
     else:
     	return False
