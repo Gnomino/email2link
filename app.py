@@ -31,11 +31,11 @@ def index():
 		subject = ",".join(filenames)
 	else:
 		subject = "Re: " + request.form.get('subject')
-	recipients = request.form.get("to") + ',' + request.form.get("Cc")
+	recipients = request.form.get("To") + ',' + request.form.get("Cc")
 	recipients = recipients.replace(' ', '').split(',')
 	filteredRecipients = []
 	for r in recipients:
-		if r != request.form.get("to") and r != request.form.get("from"):
+		if r != request.form.get("To") and r != request.form.get("from"):
 			filteredRecipients.append(r)
 	maildata = {"from": config['from_email'], "to": request.form["from"], "cc": filteredRecipients, "subject": subject}
 	messageHTML = "Your images were successfully uploaded : <br>"
